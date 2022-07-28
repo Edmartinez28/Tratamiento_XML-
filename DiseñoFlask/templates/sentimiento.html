@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="/sentimiento" method="POST">
+
+    <div class="field" id="MensPos">
+        <h2>{{ mensajecont }}</h2>
+    </div>
+
+    {% if svm == 'P' %}
+        <h3>Mensaje Positivo</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDfTf1UhlwyXUfPKN2waYu9jJKSyHMQdty2g&usqp=CAU"/>
+    {% elif  svm == 'N' %}
+        <h3>Mensaje Negativo</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFsifFUddGMzOAeoqGDgJ2Z6PhDYBx2wxeFg&usqp=CAU"/>
+    {% elif  svm == 'NEU' %}
+        <h3>Mensaje Neutro</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTfhiWBv4bmNU7NuT7ttoNOJOkdzOds0AOc_mGZ3cOLv-DPLHkVkjD4SVM59t5M0PXsU8&usqp=CAU"/>
+    {% else %}
+        <h3>No se pudo encontrar el sentimiento en este mensaje</h3>
+    {% endif %}
+
+    <div class="field" id="BotonPos">
+            <button type="submit" class="btn btn-secondary">
+                Volver
+            </button>
+    </div>
+
+
+</form>
+
+{% endblock %}
+

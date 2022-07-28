@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="/definir" method="POST">
+
+    <div class="field" id="IngMens">
+        <h1>Medidor de sentimintos</h1>
+        <input type="text" name="mensaje" content="Mensaje" placeholder="Ingrese un mensaje">
+        <button type="submit" class="btn btn-secondary">
+            Medir
+        </button>
+    </div>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDfTf1UhlwyXUfPKN2waYu9jJKSyHMQdty2g&usqp=CAU"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTfhiWBv4bmNU7NuT7ttoNOJOkdzOds0AOc_mGZ3cOLv-DPLHkVkjD4SVM59t5M0PXsU8&usqp=CAU"/>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFsifFUddGMzOAeoqGDgJ2Z6PhDYBx2wxeFg&usqp=CAU"/>
+
+</form>
+
+{% endblock %}
+
